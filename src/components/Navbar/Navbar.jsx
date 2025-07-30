@@ -6,14 +6,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeId, setActiveId] = useState("");
 
-  const menuItems = React.useMemo(() => [
-    { id: "about", label: "About" },
-    { id: "work", label: "Work" },
-    { id: "contact", label: "Contact" },
-    { id: "education", label: "Education" },
-    { id: "skill", label: "Skill" },
-    { id: "experience", label: "Experience" },
-  ], []);
+  const menuItems = React.useMemo(
+    () => [
+      { id: "about", label: "About" },
+      { id: "work", label: "Work" },
+      { id: "contact", label: "Contact" },
+      { id: "education", label: "Education" },
+      { id: "skill", label: "Skill" },
+      { id: "experience", label: "Experience" },
+    ],
+    []
+  );
 
   // Smooth scroll to section
   const scrollToSection = (id) => {
@@ -35,9 +38,7 @@ const Navbar = () => {
           : { id: item.id, offset: Infinity };
       });
 
-      const current = offsets
-        .filter((item) => scrollY >= item.offset)
-        .pop();
+      const current = offsets.filter((item) => scrollY >= item.offset).pop();
 
       if (current && current.id !== activeId) {
         setActiveId(current.id);
@@ -53,7 +54,9 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent text-white px-4 py-5 shadow-md relative z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold cursor-pointer">Tuhin</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Tuhin
+        </h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
@@ -61,15 +64,13 @@ const Navbar = () => {
             <li key={item.id} className="group ">
               <button
                 onClick={() => scrollToSection(item.id)}
-                className={`outline-none focus:outline-none relative py-1 transition text-sm cursor-pointer ${
+                className={`outline-none focus:outline-none relative py-1 transition text-sm hover:text-purple-400 cursor-pointer ${
                   activeId === item.id ? "text-purple-400" : ""
                 }`}
               >
                 {item.label}
                 {/* Underline Animation */}
-                <span
-                  className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full group-hover:left-0 "
-                />
+                <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full group-hover:left-0 " />
               </button>
             </li>
           ))}
@@ -77,7 +78,11 @@ const Navbar = () => {
 
         {/* Social Icons (desktop) */}
         <div className="hidden md:flex items-center gap-4 text-xl">
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/tuhin360"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub className="hover:text-purple-400 transition" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">
@@ -94,7 +99,9 @@ const Navbar = () => {
       {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-40 z-40 transition-opacity duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
       />
@@ -103,7 +110,11 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-[#0f172a] text-white px-6 py-4 shadow-lg z-50
           transform transition-all duration-300 ease-in-out
-          ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}
+          ${
+            isOpen
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-0 pointer-events-none"
+          }
         `}
       >
         <div className="flex justify-end mb-6">
@@ -124,11 +135,19 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex gap-4 text-xl pt-6">
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+        <div className="flex gap-4 text-xl pt-6 ">
+          <a
+            href="https://github.com/tuhin360"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub className="hover:text-purple-400 transition" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a
+            href="www.linkedin.com/in/jahedi-alam-tuhin-a90289261"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin className="hover:text-purple-400 transition" />
           </a>
         </div>
