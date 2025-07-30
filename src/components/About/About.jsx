@@ -7,7 +7,7 @@ const About = () => {
    
 
   return (
-    <div className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4">
+    <div className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4 my-8 md:my-12">
     
 
       {/* ✅ Text Content */}
@@ -53,7 +53,7 @@ const About = () => {
       </div>
 
       {/* ✅ Profile Image */}
-      <div className="relative z-10 md:w-1/2 flex justify-center">
+      <div className="relative z-10 md:w-1/2 flex justify-center  ">
         <Tilt>
           <div
             className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden 
@@ -63,7 +63,7 @@ const About = () => {
             <img
               src="/tuhin.png"
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
           </div>
         </Tilt>
