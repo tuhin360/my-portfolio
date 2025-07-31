@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GaugeChart from "react-gauge-chart";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const tabs = [
   {
@@ -53,15 +55,23 @@ const tabs = [
 
 const Skill = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
-    <div className="w-full max-w-7xl mx-auto mt-16 px-4">
-      <h1 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4">
+      <h1
+        className="text-3xl md:text-4xl font-bold text-white mb-8 text-center"
+        data-aos="fade-down"
+      >
         My Skills
       </h1>
-
+      <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 mx-auto rounded-full"></div>
       {/* Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
+      <div
+        className="flex flex-wrap justify-center gap-4 my-8"
+        data-aos="fade-up"
+      >
         {tabs.map((tab, index) => (
           <button
             key={index}
@@ -84,15 +94,14 @@ const Skill = () => {
           <div
             key={i}
             className="bg-[#1e293b] rounded-lg p-4 w-full flex flex-col items-center text-white shadow-md"
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
           >
-            <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
             <GaugeChart
               id={`gauge-${i}`}
               nrOfLevels={30}
               percent={skill.level}
               colors={["#4c1d95", "#7e22ce", "#ec4899"]}
-              // Deep Purple → Violet → Neon Pink
-
               arcWidth={0.3}
               textColor="#fff"
               needleColor="#a855f7"
@@ -100,9 +109,7 @@ const Skill = () => {
               animate={true}
               style={{ width: "150px" }}
             />
-            <p className="mt-2 text-sm font-medium">
-              {(skill.level * 100).toFixed(0)}%
-            </p>
+            <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
           </div>
         ))}
       </div>

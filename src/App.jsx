@@ -11,6 +11,9 @@ import Footer from "./components/Footer/Footer";
 import Tilt from "react-parallax-tilt";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+ 
+
+
 
 function App() {
   // Initialize particles
@@ -22,6 +25,9 @@ function App() {
   const particlesLoaded = useCallback(async (container) => {
     // console.log("Particles loaded:", container);
   }, []);
+
+ 
+
   return (
     <div className="min-h-screen w-full bg-[#020617] relative overflow-x-hidden">
       <Particles
@@ -108,8 +114,8 @@ function App() {
         <Navbar />
         <About />
         <Skill />
-        {/* <Experience />
-        <Work />
+        <Experience />
+        {/* <Work />
         <Education />
         <Contact />
         <Footer /> */}

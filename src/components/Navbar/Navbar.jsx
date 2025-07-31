@@ -9,11 +9,11 @@ const Navbar = () => {
   const menuItems = React.useMemo(
     () => [
       { id: "about", label: "About" },
+      { id: "skill", label: "Skill" },
+      { id: "experience", label: "Experience" },
       { id: "work", label: "Work" },
       { id: "contact", label: "Contact" },
       { id: "education", label: "Education" },
-      { id: "skill", label: "Skill" },
-      { id: "experience", label: "Experience" },
     ],
     []
   );
