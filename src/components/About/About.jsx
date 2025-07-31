@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
- 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
-   
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
 
   return (
-    <div className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4 my-8 md:my-12"  id="about">
-    
-
-      {/* ✅ Text Content */}
-      <div className="relative z-10 md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+    <section
+      id="about"
+      className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4 my-8 md:my-12"
+    >
+      {/* Text Content */}
+      <div
+        className="relative z-10 md:w-1/2 text-center md:text-left mt-8 md:mt-0"
+        data-aos="fade-right"
+      >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
           Hi, I am
         </h1>
@@ -52,23 +59,26 @@ const About = () => {
         </a>
       </div>
 
-      {/* ✅ Profile Image */}
-      <div className="relative z-10 md:w-1/2 flex justify-center  ">
+      {/* Profile Image */}
+      <div
+        className="relative z-10 md:w-1/2 flex justify-center"
+        data-aos="fade-left"
+      >
         <Tilt>
           <div
-            className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden 
-            border-4 border-white shadow-2xl 
+            className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden
+            border-4 border-white shadow-2xl
             transform hover:scale-105 hover:rotate-1 transition-all duration-500 ease-in-out"
           >
             <img
               src="/tuhin.png"
               alt="Profile"
-              className="w-full h-full object-cover "
+              className="w-full h-full object-cover"
             />
           </div>
         </Tilt>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -55,59 +55,64 @@ const tabs = [
 
 const Skill = () => {
   const [activeTab, setActiveTab] = useState(0);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
   return (
-    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4" id="skill">
-      <div className="text-center mb-16">
-        <h1
-          className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg"
-          data-aos="fade-down"
-        >
+    <section
+      id="skill"
+      className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4"
+    >
+      {/* Header */}
+      <div className="text-center mb-16" data-aos="fade-down">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
           Skill
         </h1>
-        <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 mx-auto rounded-full"></div>
-        <p
-          className="text-gray-300 mt-6 text-lg font-medium"
-          data-aos="fade-up"
-        >
+        <div className="w-32 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+        <p className="text-gray-300 mt-6 text-lg font-medium" data-aos="fade-up">
           Highlighting my key skills and technologies
         </p>
       </div>
 
       {/* Tabs */}
-      <div
+      <nav
         className="flex flex-wrap justify-center gap-4 my-8"
         data-aos="fade-up"
       >
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`py-2 px-5 rounded-lg text-sm font-semibold transition duration-300 
-              ${
-                activeTab === index
-                  ? "inline-block px-6 py-2   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition"
-                  : "bg-[#1e293b] text-gray-300 hover:bg-purple-700 hover:text-white"
-              }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+        {tabs.map((tab, index) => {
+          const isActive = activeTab === index;
+          return (
+            <button
+              key={tab.label}
+              onClick={() => setActiveTab(index)}
+              className={`py-2 px-6 rounded-lg text-sm font-semibold transition duration-300
+                ${
+                  isActive
+                    ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90"
+                    : "bg-[#1e293b] text-gray-300 hover:bg-purple-700 hover:text-white"
+                }`}
+              aria-current={isActive ? "true" : "false"}
+              aria-label={`Select ${tab.label} skills tab`}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
+      </nav>
 
-      {/* Gauge Style Skill Chart */}
+      {/* Skills Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
         {tabs[activeTab].skills.map((skill, i) => (
-          <div
-            key={i}
+          <article
+            key={skill.name}
             className="bg-[#1e293b] rounded-lg p-4 w-full flex flex-col items-center text-white shadow-md"
             data-aos="fade-up"
             data-aos-delay={i * 100}
           >
             <GaugeChart
-              id={`gauge-${i}`}
+              id={`gauge-${activeTab}-${i}`}
               nrOfLevels={30}
               percent={skill.level}
               colors={["#4c1d95", "#7e22ce", "#ec4899"]}
@@ -116,13 +121,13 @@ const Skill = () => {
               needleColor="#a855f7"
               needleBaseColor="#a855f7"
               animate={true}
-              style={{ width: "150px" }}
+              style={{ width: 150 }}
             />
-            <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
-          </div>
+            <h3 className="text-lg font-semibold mt-4">{skill.name}</h3>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
