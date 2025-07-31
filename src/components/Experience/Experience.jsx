@@ -39,7 +39,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4 mb-40 ">
+    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4 mb-40 "  id="experience">
       <div className="text-center mb-16">
         <h1
           className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg"

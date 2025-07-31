@@ -4,13 +4,13 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skill from "./components/Skill/Skill";
 import Experience from "./components/Experience/Experience";
-import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Tilt from "react-parallax-tilt";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import Project from "./components/Project/Project";
  
 
 
@@ -115,7 +115,8 @@ function App() {
         <About />
         <Skill />
         <Experience />
-        {/* <Work />
+        <Project/>
+        {/*  
         <Education />
         <Contact />
         <Footer /> */}

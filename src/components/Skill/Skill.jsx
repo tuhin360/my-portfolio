@@ -59,14 +59,23 @@ const Skill = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
   return (
-    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4">
-      <h1
-        className="text-3xl md:text-4xl font-bold text-white mb-8 text-center"
-        data-aos="fade-down"
-      >
-        My Skills
-      </h1>
-      <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 mx-auto rounded-full"></div>
+    <div className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4" id="skill">
+      <div className="text-center mb-16">
+        <h1
+          className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg"
+          data-aos="fade-down"
+        >
+          Skill
+        </h1>
+        <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 mx-auto rounded-full"></div>
+        <p
+          className="text-gray-300 mt-6 text-lg font-medium"
+          data-aos="fade-up"
+        >
+          Highlighting my key skills and technologies
+        </p>
+      </div>
+
       {/* Tabs */}
       <div
         className="flex flex-wrap justify-center gap-4 my-8"

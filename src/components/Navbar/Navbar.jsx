@@ -11,7 +11,7 @@ const Navbar = () => {
       { id: "about", label: "About" },
       { id: "skill", label: "Skill" },
       { id: "experience", label: "Experience" },
-      { id: "work", label: "Work" },
+      { id: "project", label: "Project" },
       { id: "contact", label: "Contact" },
       { id: "education", label: "Education" },
     ],
@@ -19,13 +19,17 @@ const Navbar = () => {
   );
 
   // Smooth scroll to section
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      setIsOpen(false); // Close mobile menu
-    }
-  };
+ const scrollToSection = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const yOffset = -80; // negative offset in pixels, adjust as needed
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+    setIsOpen(false); // Close mobile menu
+  }
+};
+
 
   // Track active section
   useEffect(() => {

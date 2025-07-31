@@ -7,7 +7,7 @@ const About = () => {
    
 
   return (
-    <div className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4 my-8 md:my-12">
+    <div className="relative flex flex-col-reverse md:flex-row justify-between items-center mx-4 my-8 md:my-12"  id="about">
     
 
       {/* ✅ Text Content */}
