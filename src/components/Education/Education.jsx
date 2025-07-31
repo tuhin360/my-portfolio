@@ -9,21 +9,21 @@ const educationData = [
     institution: "Shahid Police Smrity School & College, Panchagarh",
     year: "2016",
     description:
-      "Completed SSC focusing on science subjects with strong academic performance.",
+      "Completed SSC in the Science stream with a focus on foundational academic subjects.",
   },
   {
     degree: "Higher Secondary School Certificate (HSC)",
     institution: "Mokbular Rahman Govt. College, Panchagarh",
     year: "2019",
     description:
-      "Completed HSC in Science group with excellent grades, preparing for higher studies.",
+      "Successfully completed HSC in the Science group, maintaining steady academic progress.",
   },
   {
     degree: "Bachelor of Science (BSc) in Computer Science",
     institution: "Green University of Bangladesh, Dhaka",
     year: "2024",
     description:
-      "Graduated with solid foundation in computer science, programming, and software development.",
+      "Earned a BSc in Computer Science with hands-on experience in programming, software development, and problem-solving.",
   },
 ];
 
@@ -71,9 +71,7 @@ const Education = () => {
             >
               {/* Timeline Dot with Graduation Cap Icon */}
               <div className="z-20 relative">
-                <div
-                  className="w-8 h-8 rounded-full border-4 border-white shadow-lg bg-gradient-to-tr from-purple-600 via-pink-500 to-blue-500 flex items-center justify-center animate-pulse"
-                >
+                <div className="w-8 h-8 rounded-full border-4 border-white shadow-lg bg-gradient-to-tr from-purple-600 via-pink-500 to-blue-500 flex items-center justify-center animate-pulse">
                   <FaGraduationCap className="text-white text-xl" />
                 </div>
 
@@ -100,7 +98,9 @@ const Education = () => {
                   {edu.institution}
                 </p>
                 <p className="text-gray-400 italic mb-4">{edu.year}</p>
-                <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                <p className="text-gray-300 leading-relaxed">
+                  {edu.description}
+                </p>
               </div>
             </div>
           );

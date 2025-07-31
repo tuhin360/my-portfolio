@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { RxRocket } from "react-icons/rx";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
@@ -16,10 +15,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_lu26m17", // ✅ Your service ID
-        "template_0pq9ihz", // ✅ Your template ID
+        "service_lu26m17",
+        "template_0pq9ihz",
         form.current,
-        "1fUGboxoEk715gn9R" // ✅ Your public key
+        "1fUGboxoEk715gn9R"
       )
       .then(
         () => {
@@ -60,7 +59,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4 mb-40"
+      className="w-full max-w-7xl mx-auto mt-16 md:mt-16 px-4  mb-16"
     >
       {/* Toast Notifications */}
       <ToastContainer />

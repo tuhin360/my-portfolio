@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useCallback } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -118,10 +119,7 @@ function App() {
         <Project/>
         <Education />
         <Contact />
-        {/*  
-        
-        
-        <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
