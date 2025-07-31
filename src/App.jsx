@@ -117,9 +117,10 @@ function App() {
         <Experience />
         <Project/>
         <Education />
+        <Contact />
         {/*  
         
-        <Contact />
+        
         <Footer /> */}
       </div>
     </div>
