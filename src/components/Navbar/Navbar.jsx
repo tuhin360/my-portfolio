@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,24 +14,23 @@ const Navbar = () => {
       { id: "skill", label: "Skill" },
       { id: "experience", label: "Experience" },
       { id: "project", label: "Project" },
-      { id: "contact", label: "Contact" },
       { id: "education", label: "Education" },
+      { id: "contact", label: "Contact" },
     ],
     []
   );
 
   // Smooth scroll to section
- const scrollToSection = (id) => {
-  const el = document.getElementById(id);
-  if (el) {
-    const yOffset = -80; // negative offset in pixels, adjust as needed
-    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const yOffset = -80; // negative offset in pixels, adjust as needed
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
-    setIsOpen(false); // Close mobile menu
-  }
-};
-
+      window.scrollTo({ top: y, behavior: "smooth" });
+      setIsOpen(false); // Close mobile menu
+    }
+  };
 
   // Track active section
   useEffect(() => {
@@ -58,9 +59,11 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent text-white px-4 py-5 shadow-md relative z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Tuhin
-        </h1>
+        <a href="/">
+          <h1 className="text-2xl font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:scale-105 transition font-great-vibes">
+            Tuhin
+          </h1>
+        </a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
@@ -68,7 +71,7 @@ const Navbar = () => {
             <li key={item.id} className="group ">
               <button
                 onClick={() => scrollToSection(item.id)}
-                className={`outline-none focus:outline-none relative py-1 transition text-sm hover:text-purple-400 cursor-pointer ${
+                className={`outline-none focus:outline-none relative py-1 transition text-sm md:text-md hover:text-purple-400 cursor-pointer ${
                   activeId === item.id ? "text-purple-400" : ""
                 }`}
               >
@@ -86,10 +89,18 @@ const Navbar = () => {
             href="https://github.com/tuhin360"
             target="_blank"
             rel="noreferrer"
+            data-tooltip-id="social-tooltip"
+            data-tooltip-content="GitHub"
           >
             <FaGithub className="hover:text-purple-400 transition" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/jahedi-alam-tuhin-a90289261/"
+            target="_blank"
+            rel="noreferrer"
+            data-tooltip-id="social-tooltip"
+            data-tooltip-content="LinkedIn"
+          >
             <FaLinkedin className="hover:text-purple-400 transition" />
           </a>
         </div>
@@ -156,6 +167,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      <Tooltip id="social-tooltip" place="bottom" />
     </nav>
   );
 };

@@ -9,21 +9,21 @@ const educationData = [
     institution: "Shahid Police Smrity School & College, Panchagarh",
     year: "2016",
     description:
-      "Completed SSC in the Science stream with a focus on foundational academic subjects.",
+      "Science curriculum with core subjects in Physics, Chemistry, and Mathematics. Established foundation in scientific principles.",
   },
   {
-    degree: "Higher Secondary School Certificate (HSC)",
+    degree: "Higher Secondary Certificate (HSC)",
     institution: "Mokbular Rahman Govt. College, Panchagarh",
     year: "2019",
     description:
-      "Successfully completed HSC in the Science group, maintaining steady academic progress.",
+      "Advanced Science program with intensive study in Physics, Chemistry, and Mathematics. Developed analytical problem-solving skills.",
   },
   {
     degree: "Bachelor of Science (BSc) in Computer Science",
     institution: "Green University of Bangladesh, Dhaka",
     year: "2024",
     description:
-      "Earned a BSc in Computer Science with hands-on experience in programming, software development, and problem-solving.",
+      "Comprehensive computer science program covering software development, algorithms, and database systems. Applied knowledge through practical projects.",
   },
 ];
 
@@ -50,7 +50,7 @@ const Education = () => {
           className="text-gray-300 mt-8 max-w-xl mx-auto text-lg font-medium tracking-wide"
           data-aos="fade-up"
         >
-          A glimpse into my academic journey and the milestones I have achieved.
+          A glimpse into my academic journey.
         </p>
       </div>
 

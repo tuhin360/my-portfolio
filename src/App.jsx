@@ -8,13 +8,9 @@ import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Tilt from "react-parallax-tilt";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import Project from "./components/Project/Project";
- 
-
-
 
 function App() {
   // Initialize particles
@@ -26,8 +22,6 @@ function App() {
   const particlesLoaded = useCallback(async (container) => {
     // console.log("Particles loaded:", container);
   }, []);
-
- 
 
   return (
     <div className="min-h-screen w-full bg-[#020617] relative overflow-x-hidden">
@@ -116,7 +110,7 @@ function App() {
         <About />
         <Skill />
         <Experience />
-        <Project/>
+        <Project />
         <Education />
         <Contact />
         <Footer />

@@ -7,23 +7,23 @@ const tabs = [
   {
     label: "Frontend",
     skills: [
-      { name: "HTML", level: 0.85 },
-      { name: "CSS", level: 0.7 },
+      { name: "HTML", level: 0.80 },
+      { name: "CSS", level: 0.65 },
       { name: "JavaScript", level: 0.7 },
       { name: "React", level: 0.8 },
       { name: "Tailwind CSS", level: 0.85 },
       { name: "Bootstrap", level: 0.6 },
-      { name: "Redux Toolkit", level: 0.4 },
-      { name: "Next.js", level: 0.55 },
+      { name: "Redux Toolkit", level: 0.5 },
+      { name: "Next.js", level: 0.65 },
     ],
   },
   {
     label: "Backend",
     skills: [
-      { name: "Node.js", level: 0.8 },
-      { name: "Express.js", level: 0.75 },
+      { name: "Node.js", level: 0.7 },
+      { name: "Express.js", level: 0.65 },
       { name: "MongoDB", level: 0.7 },
-      { name: "Mongoose", level: 0.7 },
+      { name: "Mongoose", level: 0.4 },
       { name: "Firebase", level: 0.65 },
       { name: "REST API", level: 0.8 },
       { name: "JWT", level: 0.7 },
@@ -32,22 +32,24 @@ const tabs = [
   {
     label: "Languages",
     skills: [
-      { name: "JavaScript", level: 0.9 },
+      { name: "JavaScript", level: 0.77 },
       { name: "TypeScript", level: 0.45 },
       { name: "C", level: 0.7 },
-      { name: "Python (basic)", level: 0.3 },
+      { name: "php (basic)", level: 0.35 },
+      { name: "MySQL", level: 0.65 },
+      { name: "PostgreSQL", level: 0.55 },
     ],
   },
   {
     label: "Tools",
     skills: [
-      { name: "Git", level: 0.85 },
-      { name: "GitHub", level: 0.85 },
-      { name: "VS Code", level: 0.9 },
-      { name: "Postman", level: 0.8 },
-      { name: "Figma", level: 0.7 },
-      { name: "Chrome DevTools", level: 0.75 },
-      { name: "Vercel", level: 0.8 },
+      { name: "Git", level: 0.7 },
+      { name: "GitHub", level: 0.75 },
+      { name: "VS Code", level: 0.85 },
+      { name: "Postman", level: 0.65 },
+      { name: "Figma", level: 0.65 },
+      { name: "Canva", level: 0.55 },
+      { name: "Vercel", level: 0.65 },
       { name: "Netlify", level: 0.75 },
     ],
   },
@@ -90,8 +92,8 @@ const Skill = () => {
               className={`py-2 px-6 rounded-lg text-sm font-semibold transition duration-300
                 ${
                   isActive
-                    ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90"
-                    : "bg-[#1e293b] text-gray-300 hover:bg-purple-700 hover:text-white"
+                    ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90 cursor-pointer"
+                    : "bg-[#1e293b] text-gray-300 hover:bg-purple-700 hover:text-white  cursor-pointer"
                 }`}
               aria-current={isActive ? "true" : "false"}
               aria-label={`Select ${tab.label} skills tab`}

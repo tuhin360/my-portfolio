@@ -80,7 +80,7 @@ const Experience = () => {
 
               {/* Experience Card */}
               <div
-                className={`bg-white/5 backdrop-blur-md border border-purple-500/10 p-6 rounded-xl shadow-xl text-left sm:w-1/2 mt-6 sm:mt-0 sm:mx-8 transition-transform duration-300 hover:scale-[1.03] hover:shadow-purple-500/40`}
+                className={`bg-white/5 backdrop-blur-md border border-purple-500/10 p-6 rounded-xl shadow-xl text-left sm:w-1/2 mt-6 sm:mt-0 sm:mx-8 transition-transform duration-300 hover:scale-[1.03] hover:shadow-purple-500/40 `}
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >

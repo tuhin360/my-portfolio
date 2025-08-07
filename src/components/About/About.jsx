@@ -25,7 +25,7 @@ const About = () => {
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
           Jahedi Alam Tuhin
         </h2>
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#8245ec] mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold text-[#8245ec] mb-4">
           <span className="text-white">I am a </span>
           <span>
             <Typewriter
@@ -43,11 +43,8 @@ const About = () => {
             />
           </span>
         </h3>
-        <p className="text-base sm:text-lg md:text-2xl text-white mb-4 leading-relaxed">
-          I’m a passionate MERN Stack Developer experienced in building modern,
-          responsive, and user-friendly web applications. I love turning ideas
-          into real-world solutions and am actively seeking full-time
-          opportunities to grow as a developer.
+        <p className="text-base sm:text-lg md:text-xl text-white mb-4 leading-relaxed">
+       Passionate MERN Stack Developer skilled in building modern, responsive, and user-friendly web applications. Always exploring new technologies and turning ideas into impactful digital experiences.
         </p>
         <a
           href="https://drive.google.com/uc?export=download&id=12pOaDe9Pwrv0Necpj2F3ufp0Dh1HWDpz"
@@ -73,7 +70,7 @@ const About = () => {
             <img
               src="/tuhin.png"
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
           </div>
         </Tilt>
