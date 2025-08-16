@@ -20,6 +20,7 @@ import weatherAppImg from "../../assets/weather.jpg";
 import chatAppImg from "../../assets/chat.jpg";
 import portfolioImg from "../../assets/portfolio.jpg";
 import weatherSphereImg from "../../assets/weatherSphere.png";
+import myPortfolio from "../../assets/myPortfolio.png";
 
 const allProjects = [
   {
@@ -57,6 +58,21 @@ const allProjects = [
       "CSS",
     ],
     image: `${weatherSphereImg}`,
+    frontend: "https://github.com/tuhin360/weather-app",
+    live: "https://weather-8zksuclzm-tuhin360s-projects.vercel.app/",
+  },
+   {
+    title: "My Portfolio",
+    description: "My Personal Portfolio Website",
+    technologies: [
+      "React 19",
+      "OpenWeatherMap API",
+      "AOS (Animate On Scroll)",
+      "React Icon",
+      "Vite",
+      "CSS",
+    ],
+    image: `${myPortfolio}`,
     frontend: "https://github.com/tuhin360/weather-app",
     live: "https://weather-8zksuclzm-tuhin360s-projects.vercel.app/",
   },
