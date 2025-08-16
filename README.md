@@ -1,4 +1,4 @@
-# 🚀 [Jahedi Alam Tuhin]'s Portfolio
+# 🚀 Jahedi Alam Tuhin's Portfolio
 
 [![Live Demo](https://img.shields.io/badge/-Live%20Demo-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-pi-one-76.vercel.app/)
 
