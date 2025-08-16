@@ -18,7 +18,8 @@ import eCommerceImg from "../../assets/ecommerce.jpg";
 import taskManagerImg from "../../assets/task.jpg";
 import weatherAppImg from "../../assets/weather.jpg";
 import chatAppImg from "../../assets/chat.jpg";
-import portfolioImg from "../../assets/portfolio.jpg"; 
+import portfolioImg from "../../assets/portfolio.jpg";
+import weatherSphereImg from "../../assets/weatherSphere.png";
 
 const allProjects = [
   {
@@ -43,6 +44,21 @@ const allProjects = [
     frontend: "https://github.com/tuhin360/bistro-boss-frontend",
     backend: "https://github.com/tuhin360/bistro-boss-backend",
     live: "https://bistro-boss-97f52.web.app/",
+  },
+  {
+    title: "WeatherSphere",
+    description: "Search your city and get real-time weather forecasts",
+    technologies: [
+      "React 19",
+      "OpenWeatherMap API",
+      "AOS (Animate On Scroll)",
+      "React Icon",
+      "Vite",
+      "CSS",
+    ],
+    image: `${weatherSphereImg}`,
+    frontend: "https://github.com/tuhin360/weather-app",
+    live: "https://weather-8zksuclzm-tuhin360s-projects.vercel.app/",
   },
   {
     title: "Movie Search App",
