@@ -9,14 +9,14 @@ const educationData = [
     institution: "Shahid Police Smrity School & College, Panchagarh",
     year: "2016",
     description:
-      "Science curriculum with core subjects in Physics, Chemistry, and Mathematics. Established foundation in scientific principles.",
+      "Completed Secondary School Certificate in the Science stream with a focus on core academic subjects.",
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
     institution: "Mokbular Rahman Govt. College, Panchagarh",
-    year: "2019",
+    year: "2018",
     description:
-      "Advanced Science program with intensive study in Physics, Chemistry, and Mathematics. Developed analytical problem-solving skills.",
+      "Achieved Higher Secondary Certificate (HSC) in Science with emphasis on advanced studies.",
   },
   {
     degree: "Bachelor of Science (BSc) in Computer Science",

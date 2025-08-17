@@ -21,6 +21,7 @@ import chatAppImg from "../../assets/chat.jpg";
 import portfolioImg from "../../assets/portfolio.jpg";
 import weatherSphereImg from "../../assets/weatherSphere.png";
 import myPortfolio from "../../assets/myPortfolio.png";
+import bmiCalculator from "../../assets/bmiCalculator.png";
 
 const allProjects = [
   {
@@ -99,6 +100,21 @@ const allProjects = [
     image: `${weatherSphereImg}`,
     frontend: "https://github.com/tuhin360/weather-app",
     live: "https://weather-8zksuclzm-tuhin360s-projects.vercel.app/",
+  },
+  {
+    title: "BMI Calculator",
+    description: "",
+    technologies: [
+      "React 19",
+      "Tailwind CSS",
+      "Eslint",
+      "React Icon",
+      "Vite",
+      "CSS",
+    ],
+    image: `${bmiCalculator}`,
+    frontend: "https://github.com/tuhin360/bmi-calculator",
+    live: "https://bmi-calculator-theta-five.vercel.app/",
   },
   {
     title: "Legal House",
