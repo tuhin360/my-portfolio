@@ -150,48 +150,6 @@ const allProjects = [
     frontend: "https://github.com/tuhin360/omexo-education",
     live: "https://ornate-scone-b8c6f9.netlify.app/",
   },
-  {
-    title: "E-Commerce Platform",
-    description: "Modern online shopping experience with secure checkout",
-    technologies: ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-    image: `${eCommerceImg}`,
-    frontend: "https://github.com/tuhin360/ecommerce-frontend",
-    backend: "https://github.com/tuhin360/ecommerce-backend",
-    live: "https://ecommerce-demo.example.com",
-  },
-  {
-    title: "Task Management App",
-    description: "Organize your work and boost productivity",
-    technologies: ["React", "Firebase", "Material UI", "React DnD"],
-    image: `${taskManagerImg}`,
-    frontend: "https://github.com/tuhin360/task-manager",
-    live: "https://task-manager-demo.example.com",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Real-time weather forecasts with interactive maps",
-    technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation API"],
-    image: `${weatherAppImg}`,
-    frontend: "https://github.com/tuhin360/weather-app",
-    live: "https://weather-dashboard.example.com",
-  },
-  {
-    title: "Realtime Chat Application",
-    description: "Instant messaging with socket.io and React",
-    technologies: ["React", "Node.js", "Socket.io", "Tailwind CSS"],
-    image: `${chatAppImg}`,
-    frontend: "https://github.com/tuhin360/chat-app-frontend",
-    backend: "https://github.com/tuhin360/chat-app-backend",
-    live: "https://chat-app-demo.example.com",
-  },
-  {
-    title: "Portfolio Template",
-    description: "Modern responsive portfolio template for developers",
-    technologies: ["React", "Framer Motion", "Tailwind CSS", "EmailJS"],
-    image: `${portfolioImg}`,
-    frontend: "https://github.com/tuhin360/portfolio-template",
-    live: "https://portfolio-template.example.com",
-  },
 ];
 
 const Project = () => {
