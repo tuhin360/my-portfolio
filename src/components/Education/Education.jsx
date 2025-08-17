@@ -71,16 +71,10 @@ const Education = () => {
             >
               {/* Timeline Dot with Graduation Cap Icon */}
               <div className="z-20 relative">
-                <div className="w-8 h-8 rounded-full border-4 border-white shadow-lg bg-gradient-to-tr from-purple-600 via-pink-500 to-blue-500 flex items-center justify-center animate-pulse">
+                <div className="w-8 h-8 rounded-full border-4 border-white shadow-lg bg-gradient-to-tr from-purple-600 via-pink-500 to-blue-500 flex items-center justify-center">
                   <FaGraduationCap className="text-white text-xl" />
                 </div>
 
-                {/* Connector line from dot to card */}
-                <div
-                  className={`hidden md:block absolute top-1/2 w-10 h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 ${
-                    isLeft ? "left-full" : "right-full"
-                  } -translate-y-1/2 rounded-full`}
-                />
               </div>
 
               {/* Education Card */}

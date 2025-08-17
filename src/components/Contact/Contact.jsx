@@ -88,7 +88,7 @@ const Contact = () => {
       >
         {/* Form Title */}
         <h2 className="text-2xl font-bold text-center flex items-center justify-center gap-2 mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Let's Connect <RxRocket className="text-purple-300 animate-pulse" />
+          Let's Connect <RxRocket className="text-purple-300 md:animate-pulse" />
         </h2>
 
         {/* Name Field */}
