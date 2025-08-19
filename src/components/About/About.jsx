@@ -47,7 +47,7 @@ const About = () => {
        Passionate MERN Stack Developer skilled in building modern, responsive, and user-friendly web applications. Always exploring new technologies and turning ideas into impactful digital experiences.
         </p>
         <a
-          href="https://drive.google.com/uc?export=download&id=12pOaDe9Pwrv0Necpj2F3ufp0Dh1HWDpz"
+          href=" https://drive.google.com/uc?export=download&id=1IyOLDhQkFqz0w16Qb1V2_W1QRKNT1-Jr"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition"
